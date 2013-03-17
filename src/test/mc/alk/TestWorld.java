@@ -1,4 +1,4 @@
-package mc.alk.test;
+package test.mc.alk;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -14,7 +14,7 @@ public class TestWorld implements MCWorld{
 
 	public TestWorld(String name){
 		this.name = name;
-		TestAPI.setWorld(name,this);
+		TestServer.setWorld(name,this);
 	}
 
 	@Override
@@ -28,9 +28,7 @@ public class TestWorld implements MCWorld{
 		if (blocks.containsKey(key))
 			return blocks.get(key);
 		else {
-			MCBlock b = new TestBlock(new TestLocation(this,x,y,z),0);
-			blocks.put(key, b);
-			return b;
+			return new TestBlock(new TestLocation(this,x,y,z),0);
 		}
 	}
 
@@ -55,4 +53,21 @@ public class TestWorld implements MCWorld{
 	public String toString(){
 		return "["+name+":"+hashCode()+"]";
 	}
+
+	@Override
+	public MCBlock toType(MCBlock block, Class<? extends MCBlock> clazz) throws ClassCastException {
+		if (clazz.isAssignableFrom(block.getClass()))
+			return block;
+		throw new ClassCastException("block " + block +" cannot be cast to " + clazz);
+	}
+
+	@Override
+	public boolean isType(MCBlock block, Class<? extends MCBlock> clazz) {
+		try{MCBlock b = toType(block,clazz);
+			return b != null;
+		} catch (ClassCastException e){
+			return false;
+		}
+	}
+
 }

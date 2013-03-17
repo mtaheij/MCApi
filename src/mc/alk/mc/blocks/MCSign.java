@@ -8,6 +8,4 @@ public interface MCSign extends MCBlock {
 	public String getLine(int index);
 	public String[] getLines();
 
-	public void update(boolean b);
-
 }

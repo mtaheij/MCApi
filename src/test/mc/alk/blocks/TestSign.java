@@ -1,11 +1,12 @@
-package mc.alk.test.blocks;
+package test.mc.alk.blocks;
 
 import mc.alk.mc.MCLocation;
 import mc.alk.mc.blocks.MCSign;
-import mc.alk.test.TestBlock;
 
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Material;
+
+import test.mc.alk.TestBlock;
 
 public class TestSign extends TestBlock implements MCSign{
 	String[] lines = new String[4];

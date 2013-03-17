@@ -37,4 +37,12 @@ public class BukkitLocation implements MCLocation{
 		return loc.getBlockZ();
 	}
 
+	public Location getLocation() {
+		return loc;
+	}
+	@Override
+	public String toString(){
+		return loc == null ? "[Location null]" :  "[Location "+loc.getWorld()+" "+
+				loc.getBlockX() +":"+ loc.getBlockY()+":"+loc.getBlockZ()+"]";
+	}
 }

@@ -1,4 +1,4 @@
-package mc.alk.test;
+package test.mc.alk;
 
 import mc.alk.mc.MCLocation;
 import mc.alk.mc.MCWorld;
@@ -8,7 +8,7 @@ public class TestLocation implements MCLocation{
 	int x,y,z;
 
 	public TestLocation(String world, int x,int y, int z) {
-		this(TestAPI.getWorld(world),x,y,z);
+		this(TestServer.getWorld(world),x,y,z);
 	}
 
 	public TestLocation(MCWorld world, int x, int y, int z) {

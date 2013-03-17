@@ -3,9 +3,13 @@ package mc.alk.mc;
 
 
 public interface MCWorld {
-	String getName();
+	public String getName();
 
-	MCBlock getBlockAt(int x, int y, int z);
+	public MCBlock getBlockAt(int x, int y, int z);
 
-	MCBlock getBlockAt(MCLocation loc);
+	public MCBlock getBlockAt(MCLocation loc);
+
+	public boolean isType(MCBlock block, Class<? extends MCBlock> clazz);
+
+	public MCBlock toType(MCBlock block, Class<? extends MCBlock> clazz) throws ClassCastException;
 }

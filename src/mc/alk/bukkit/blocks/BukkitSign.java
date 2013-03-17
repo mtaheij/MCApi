@@ -3,14 +3,14 @@ package mc.alk.bukkit.blocks;
 import mc.alk.bukkit.BukkitBlock;
 import mc.alk.mc.blocks.MCSign;
 
-import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
 
 public class BukkitSign extends BukkitBlock implements MCSign{
 	Sign sign;
-	public BukkitSign(Block block) {
-		super(block);
-		sign = (Sign)block.getState();
+
+	public BukkitSign(Sign sign) {
+		super(sign.getBlock());
+		this.sign = sign;
 	}
 
 	@Override
@@ -29,7 +29,16 @@ public class BukkitSign extends BukkitBlock implements MCSign{
 	}
 
 	@Override
-	public void update(boolean b) {
-		sign.update(b);
+	public BukkitSign clone(){
+		return new BukkitSign(sign);
+	}
+
+	@Override
+	public void update(boolean b){
+		sign.update(true);
+	}
+
+	public Sign getSign(){
+		return sign;
 	}
 }

@@ -7,40 +7,54 @@ import mc.alk.mc.MCWorld;
 import org.bukkit.block.Block;
 
 public class BukkitBlock implements MCBlock{
-	Block b;
+	Block block;
 
 	public BukkitBlock(Block block) {
-		this.b = block;
+		this.block = block;
 	}
 
 	@Override
 	public MCWorld getWorld() {
-		return new BukkitWorld(b.getWorld());
+		return new BukkitWorld(block.getWorld());
 	}
 
 	@Override
 	public MCLocation getLocation() {
-		return new BukkitLocation(b.getLocation());
+		return new BukkitLocation(block.getLocation());
 	}
 
 	@Override
 	public int getX() {
-		return b.getX();
+		return block.getX();
 	}
 
 	@Override
 	public int getY() {
-		return b.getY();
+		return block.getY();
 	}
 
 	@Override
 	public int getZ() {
-		return b.getZ();
+		return block.getZ();
 	}
 
 	@Override
 	public int getType() {
-		return b.getTypeId();
+		return block.getTypeId();
+	}
+
+	@Override
+	public void update(boolean b) {
+		block.getState().update();
+	}
+
+	@Override
+	public BukkitBlock clone(){
+		return new BukkitBlock(block);
+	}
+
+	public Block getBlock() {
+		return block;
 	}
 
 }

@@ -1,4 +1,4 @@
-package mc.alk.test;
+package test.mc.alk;
 
 import mc.alk.mc.MCBlock;
 import mc.alk.mc.MCLocation;
@@ -43,5 +43,10 @@ public class TestBlock implements MCBlock{
 	@Override
 	public String toString(){
 		return "[Block " + type +":"+ value +" " + loc+"]";
+	}
+
+	@Override
+	public void update(boolean b) {
+		/* do nothing */
 	}
 }
