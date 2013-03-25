@@ -39,6 +39,13 @@ public abstract class MCServer {
 	public abstract long scheduleSyncTask(MCPlugin plugin, Runnable runnable, long millis);
 	public abstract boolean cancelMCTask(long id);
 
+	public static int scheduleAsynchrounousTask(MCPlugin plugin, Runnable task) {
+		return scheduleAsynchrounousTask(plugin, task, 0);
+	}
+
+	public static int scheduleAsynchrounousTask(MCPlugin plugin, Runnable task, long millis) {
+		return Scheduler.scheduleAsynchrounousTask(task, millis);
+	}
 	public static MCPlayer getPlayer(String name) {
 		return INSTANCE.getMCPlayer(name);
 	}
@@ -52,5 +59,6 @@ public abstract class MCServer {
 	public static boolean cancelTask(long id) {
 		return INSTANCE.cancelMCTask(id);
 	}
+
 
 }
