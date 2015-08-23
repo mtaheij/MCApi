@@ -1,4 +1,4 @@
-package mc.alk.testbukkit;
+package mc.alk.tests.testbukkit;
 
 import java.net.InetSocketAddress;
 import java.util.Collection;

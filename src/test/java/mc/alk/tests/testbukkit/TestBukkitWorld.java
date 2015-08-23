@@ -1,5 +1,4 @@
-package mc.alk.testbukkit;
-
+package mc.alk.tests.testbukkit;
 import java.io.File;
 import java.util.Collection;
 import java.util.List;
