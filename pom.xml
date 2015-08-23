@@ -8,6 +8,8 @@
     <name>BattleMCApi</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
     </properties>
     <url>http://maven.apache.org</url>
     <!-- Locations for jar repositories -->
@@ -47,7 +49,7 @@
             </resource>
             <!-- Exclude test directory -->
             <resource>
-                <directory>src/test/</directory>
+                <directory>src/test/java/</directory>
                 <excludes>
                     <exclude>**/*</exclude>
                 </excludes>
@@ -55,6 +57,20 @@
         </resources>
         <!-- Specify how we build the plugin.jar -->
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <!-- Shade (includes these in the final jar) -->
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
