@@ -4,7 +4,7 @@
     <groupId>mc.alk</groupId>
     <artifactId>MCApi</artifactId>
     <packaging>jar</packaging>
-    <version>1.2.4</version>
+    <version>1.2.5</version>
     <name>BattleMCApi</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,6 +34,7 @@
         <!-- Where our source directory is -->
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <testSourceDirectory>${basedir}/src/test</testSourceDirectory>
+        <testOutputDirectory>${basedir}/target/classes</testOutputDirectory>
         <resources>
             <!-- Include all the resources we need -->
             <resource>
