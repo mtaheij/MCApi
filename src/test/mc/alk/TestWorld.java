@@ -1,4 +1,4 @@
-package test.mc.alk;
+package mc.alk;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

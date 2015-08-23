@@ -1,4 +1,4 @@
-package test.mc.alk.testbukkit;
+package mc.alk.testbukkit;
 
 import java.net.InetSocketAddress;
 import java.util.Collection;
@@ -1086,30 +1086,6 @@ public class TestBukkitPlayer implements Player{
 	@Override
 	public void setWalkSpeed(float value) throws IllegalArgumentException {
 
-
-	}
-
-	@Override
-	public String getCustomName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean isCustomNameVisible() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void setCustomName(String arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void setCustomNameVisible(boolean arg0) {
-		// TODO Auto-generated method stub
 
 	}
 

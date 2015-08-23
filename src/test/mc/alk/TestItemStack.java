@@ -1,4 +1,4 @@
-package test.mc.alk;
+package mc.alk;
 
 import java.util.HashMap;
 import java.util.Map;

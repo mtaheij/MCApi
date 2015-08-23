@@ -1,4 +1,4 @@
-package test.mc.alk;
+package mc.alk;
 
 import mc.alk.mc.MCLocation;
 import mc.alk.mc.MCWorld;

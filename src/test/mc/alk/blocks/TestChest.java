@@ -1,5 +1,7 @@
-package test.mc.alk.blocks;
+package mc.alk.blocks;
 
+import mc.alk.TestBlock;
+import mc.alk.TestInventory;
 import mc.alk.mc.MCBlock;
 import mc.alk.mc.MCInventory;
 import mc.alk.mc.MCItemStack;
@@ -9,9 +11,6 @@ import mc.alk.mc.blocks.MCChest;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.bukkit.Material;
-
-import test.mc.alk.TestBlock;
-import test.mc.alk.TestInventory;
 
 public class TestChest extends TestBlock implements MCChest{
 	TestInventory inventory = new TestInventory();

@@ -4,8 +4,8 @@
     <groupId>mc.alk</groupId>
     <artifactId>MCApi</artifactId>
     <packaging>jar</packaging>
-    <version>1.2.3</version>
-    <name>MCApi</name>
+    <version>1.2.4</version>
+    <name>BattleMCApi</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -32,7 +32,8 @@
     <build>
         <defaultGoal>install</defaultGoal>
         <!-- Where our source directory is -->
-        <sourceDirectory>${basedir}/src/mc</sourceDirectory>
+        <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+        <testSourceDirectory>${basedir}/src/test</testSourceDirectory>
         <resources>
             <!-- Include all the resources we need -->
             <resource>
@@ -53,20 +54,6 @@
         </resources>
         <!-- Specify how we build the plugin.jar -->
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>1.4</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <!-- Shade (includes these in the final jar) -->
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 </project>

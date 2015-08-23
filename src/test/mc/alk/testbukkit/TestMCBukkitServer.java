@@ -1,7 +1,7 @@
-package test.mc.alk.testbukkit;
+package mc.alk.testbukkit;
 
 import mc.alk.mc.MCPlugin;
-import test.mc.alk.TestServer;
+import mc.alk.TestServer;
 
 public class TestMCBukkitServer extends TestServer{
 

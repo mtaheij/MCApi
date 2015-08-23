@@ -1,4 +1,4 @@
-package test.mc.alk.testbukkit;
+package mc.alk.testbukkit;
 
 import java.io.File;
 import java.util.HashMap;
