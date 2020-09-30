@@ -13,4 +13,6 @@ public interface MCPlayer extends MCCommandSender {
 	public MCInventory getInventory();
 
 	public void updateInventory();
+
+	public void fixInventory();
 }
